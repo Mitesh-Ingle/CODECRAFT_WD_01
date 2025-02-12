@@ -6,6 +6,8 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 
@@ -130,124 +132,63 @@ body::after {
     
 
 }
-
-
-/* Swiper Container */
-.swiper-container {
-    width: 90%;
-    max-width: 1400px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    overflow: hidden;
-}
-
-/* Swiper Slides (Services) */
-.swiper-slide {
-    width: 400px;
-    height: 500px;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
+/* Center "Our Services" Title */
+#services h2 {
     text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    background-color: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Service Image */
-.swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Active Slide Effect */
-.swiper-slide-active {
-    transform: scale(1.1);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-}
-
-/* Overlay for Text */
-.swiper-slide::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
-    z-index: 1;
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Service Card Content */
-.card-content {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    color: white;
-    text-align: center;
-    z-index: 2;
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Service Title */
-.card-content h3 {
-    font-size: 28px;
+    font-size: xx-large; /* Reduced size */
+    font-family: 'Playfair Display', sans-serif;
     font-weight: bold;
-    margin-bottom: 10px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Service Description */
-.card-content p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-/* View More Button */
-.card-content button {
-    background: #ff9800;
+    margin-top: 50px;
+    padding-top: 80px;
     color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 30px;
-    transition: background 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    line-height: 1;
+    display: block !important;
 }
 
-.card-content button:hover {
-    background: #e68a00;
-    transform: translateY(-5px);
+/* Swiper Container Adjustments */
+.swiper-container {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Centering the entire container */
+    width: 100%; /* Adjust width */
+    max-width:300px; /* Ensure it doesn’t expand too much */
 }
 
-/* Hover Effect on Slide */
-.swiper-slide:hover::before {
-    opacity: 0.8;
+
+.swiper-slide {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content; 
+    height: 100%; 
+    overflow: hidden;
 }
 
-.swiper-slide:hover .card-content {
-    opacity: 1;
-}
-
-/* Navigation Arrows */
 .swiper-button-prev,
 .swiper-button-next {
-    color: #ff9800;
-    background: rgba(255, 255, 255, 0.8);
-    width: 40px;
-    height: 40px;
+    position: absolute;
+    top: 50%; /* Moves arrows to the center vertically */
+    transform: translateY(-50%);
+    width: 50px; /* Adjust size */
+    height: 50px;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: -60px; /* Move closer to the slides */
+}
+
+.swiper-button-next {
+    right: -60px; /* Move closer to the slides */
 }
 
 .swiper-button-prev:hover,
@@ -256,12 +197,69 @@ body::after {
     transform: scale(1.1);
 }
 
-/* Pagination */
+/* Service Image - Consistent Sizing */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fit properly */
+    border-radius: 20px; /* Optional: Keeps rounded corners */
+}
+/* Active Slide Effect */
+.swiper-slide-active {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Overlay for Text */
+.slide-img-overlay {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, transparent 50%, rgba(0, 0, 0, 0.5) 65%, rgba(0, 0, 0, 0.75));
+}
+
+/* Increase Text Size on Image */
+.card-content {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    color: white;
+    text-align: center;
+    z-index: 2;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-content h3 {
+    font-size: 1.8rem; /* Reduced size */
+    font-weight: bold;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.card-content p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: hsl(0, 50%, 98%);
+}
+
+/* Pagination Styling */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .swiper-pagination-bullet {
-    background: #fff;
-    opacity: 0.5;
-    width: 12px;
-    height: 12px;
+    background: white;
+    opacity: 0.6;
+    width: 10px;
+    height: 10px;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -273,21 +271,27 @@ body::after {
 /* Responsive Adjustments */
 @media (max-width: 1200px) {
     .swiper-slide {
-        width: 350px;
-        height: 450px;
+        width: 280px;
+        height: 500px;
+    }
+    .swiper-button-prev {
+        left: -20px;
+    }
+    .swiper-button-next {
+        right: -20px;
     }
 }
 
 @media (max-width: 900px) {
     .swiper-slide {
-        width: 300px;
-        height: 400px;
+        width: 240px;
+        height: 450px;
     }
 }
 
 @media (max-width: 600px) {
     .swiper-slide {
-        width: 250px;
-        height: 350px;
+        width: 200px;
+        height: 380px;
     }
 }

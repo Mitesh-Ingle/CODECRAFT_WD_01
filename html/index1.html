@@ -3,110 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeCraft Infotech</title>
+    <title>CodeCraft Infotech | Tech Solutions</title>
+    
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="../css/style1.css">
-    <script defer src="../javascript/script1.js"></script>
-
-    <!-- Swiper CSS & JS -->
+    
+    <!-- Swiper Resources -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <!-- Font Resources -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Oswald...">
 </head>
 <body>
 
-    <!-- Navbar -->
+    <!-- Navigation Bar -->
     <nav class="navbar" id="navbar">
         <div class="logo-container">
             <div class="logo">
-                <a href="#" onclick="location.reload();">
+                <a href="#home">
                     <img src="../assets/icon/codec.jpg" alt="CodeCraft Logo">
                 </a>
             </div>
         </div>
+
         <div class="nav-links-container">
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#membership">Membership</a></li>
-                <li><a href="#services" id="service-link">Service</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
+
         <div class="sign-in-container">
-            <button class="sign-in">Sign In</button>
+            <button class="sign-in">Portal Login</button>
         </div>
     </nav>
-    <br><br>
-    <br>
-    <br>
-    <br>
 
     <!-- Services Section -->
-    <section id="services">
-      <br>
-      <br>
-      <br>
-
-        <h2>Our Services</h2>
-
-        <!-- Swiper Container -->
+    <section id="services" class="section-padding">
+        <h2>Our Digital Solutions And Services</h2>
+        
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="../assets/images/web dev image .jpg" alt="Web Development">
+
+                <!-- Web Development Card -->
+                <article class="swiper-slide">
+                    <img src="../assets/images/imageeee.jpg" alt="Web Development" loading="lazy">
                     <div class="card-content">
-                        <h3>Web Development</h3>
-                        <br>
-                       <i> <p>We build responsive and modern websites.</p></i>
-                        <button>View More</button>
+                        <h3>Full-Stack Development</h3>
+                        <p>Enterprise-grade web applications with modern architecture</p>
+                        <button>Explore Framework</button>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <img src="../assets/images/imageeee.jpg" alt="UI/UX Design">
+                </article>
+
+                <!-- UI/UX Design Card -->
+                <article class="swiper-slide">
+                    <img src="../assets/images/image2.webp" alt="UI/UX Design" loading="lazy">
                     <div class="card-content">
-                        <h3>UI/UX Design</h3>
-                        <br>
-                        <i> <p>We build responsive and modern websites.</p></i>                        <button>View More</button>
+                        <h3>UX Engineering</h3>
+                        <p>User-centered design systems & interface prototyping</p>
+                        <button>View Case Studies</button>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <img src="../assets/images/image2.webp" alt="SEO Optimization">
+                </article>
+
+                <!-- Cloud Solutions Card -->
+                <article class="swiper-slide">
+                    <img src="../assets/images/image2.webp" alt="Cloud Computing" loading="lazy">
                     <div class="card-content">
-                        <h3>SEO Optimization</h3>
-                        <br>
-                        <i> <p>We build responsive and modern websites.</p></i>                        <button>View More</button>
+                        <h3>Cloud Architecture</h3>
+                        <p>Scalable infrastructure & serverless solutions</p>
+                        <button>Cloud Strategy</button>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <img src="../assets/images/app deve image .jpg" alt="App Development">
+                </article>
+
+                <!-- AI/ML Card -->
+                <article class="swiper-slide">
+                    <img src="../assets/images/image2.webp" alt="Artificial Intelligence" loading="lazy">
                     <div class="card-content">
-                        <h3>App Development</h3>
-                        <br>
-                        <i> <p>We build responsive and modern websites.</p></i>                        <button>View More</button>
+                        <h3>AI Solutions</h3>
+                        <p>Machine learning integration & predictive analytics</p>
+                        <button>Explore AI</button>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <img src="../assets/images/ai and ml .jpg" alt="AI and ML">
+                </article>
+
+                <!-- DevOps Card -->
+                <article class="swiper-slide">
+                    <img src="../assets/images/image2.webp" alt="DevOps" loading="lazy">
                     <div class="card-content">
-                        <h3>AI & ML</h3>
-                        <br>
-                        <i> <p>We build responsive and modern websites.</p></i>                        <button>View More</button>
+                        <h3>DevOps Automation</h3>
+                        <p>CI/CD pipelines & infrastructure as code</p>
+                        <button>Automate Now</button>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <img src="../assets/images/ai and ml .jpg" alt="Cloud Computing">
-                    <div class="card-content">
-                        <h3>Cloud Computing</h3>
-                        <br>
-                        <i> <p>We build responsive and modern websites.</p></i>                        <button>View More</button>
-                    </div>
-                </div>
+                </article>
             </div>
-            <!-- Navigation Arrows -->
+
+            <!-- Carousel Controls -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-            <!-- Pagination -->
             <div class="swiper-pagination"></div>
         </div>
     </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../javascript/script1.js"></script>
 
 </body>
 </html>
